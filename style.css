@@ -1,9 +1,9 @@
-body > div
+body > div.head
 {
 	display: grid;
 }
 
-body > div > h1
+body > div.head > h1
 {
 	margin: auto;
 	font-size: 5vw;
@@ -11,24 +11,24 @@ body > div > h1
 	text-align: center;
 }
 
-body > div > span
+body > div.head > span
 {
 	margin: auto;
 }
 
 @media (max-width: 600px)
 {
-    body > div > h1
+    body > div.head > h1
 	{ 
 		font-size: 15vw;
 	}
 
-    body > div > h1 > span
+    body > div.head > h1 > span
 	{ 
 		display: none;
 	}
 
-	body > div > span
+	body > div.head > span
 	{
 		font-size: 5vw;
 	}
