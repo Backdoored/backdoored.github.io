@@ -6,9 +6,30 @@ body > div
 body > div > h1
 {
 	margin: auto;
+	font-size: 5vw;
+	font-family: 'Luckiest Guy', cursive;
+	text-align: center;
 }
 
 body > div > span
 {
 	margin: auto;
+}
+
+@media (max-width: 600px)
+{
+    body > div > h1
+	{ 
+		font-size: 15vw;
+	}
+
+    body > div > h1 > span
+	{ 
+		display: none;
+	}
+
+	body > div > span
+	{
+		font-size: 5vw;
+	}
 }
