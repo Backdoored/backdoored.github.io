@@ -22,7 +22,7 @@ body > div.head > span
 {
     body > div.head > h1
 	{ 
-		font-size: 15vw;
+		font-size: 12vw;
 	}
 
     body > div.head > h1 > span
@@ -86,4 +86,22 @@ div.card > h4
 div.card > ul
 {
 	margin: 0;
+}
+
+@media (max-width: 600px)
+{
+	body > div.features > div.cards
+	{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	body > div.features > div.cards > div.cards-row2
+	{
+		grid-column-start: 1;
+		grid-column-end: 4;
+	
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 }
