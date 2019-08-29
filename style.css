@@ -1,3 +1,34 @@
+/* Global shenanigans */
+
+
+/* Thanks to https://stackoverflow.com/a/40454819/11896374 for this code */
+[title] {
+	position: relative;
+}
+body.touched [title] > * {
+	user-select: none;
+}
+body.touched [title]:hover > * {
+	user-select: auto
+}
+body.touched [title]:hover:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	content: attr(title);
+	border: 1px solid rgba(100, 100, 100, 0.2);
+	background-color: rgba(240, 240, 240, 0.9);
+	/* 
+	Maybe we should keep the shadow? It makes it seem quite old and not very nice, but without we dont get the on top impression and more of a just overlay impression
+	box-shadow: 1px 1px 2px; */
+	padding: 0.3em;
+	z-index: 1;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Head */
+
 body > div.head
 {
 	display: grid;
@@ -22,7 +53,7 @@ body > div.head > span
 {
     body > div.head > h1
 	{ 
-		font-size: 15vw;
+		font-size: 12vw;
 	}
 
     body > div.head > h1 > span
@@ -37,6 +68,7 @@ body > div.head > span
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
+/* Cards */
 
 body > div.features
 {
@@ -86,4 +118,17 @@ div.card > h4
 div.card > ul
 {
 	margin: 0;
+}
+
+@media (max-width: 600px)
+{
+	body > div.features > div.cards
+	{
+		display: block;
+	}
+
+	body > div.features > div.cards > div.cards-row2
+	{
+		display: block;
+	}
 }
