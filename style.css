@@ -92,16 +92,11 @@ div.card > ul
 {
 	body > div.features > div.cards
 	{
-		display: grid;
-		grid-template-columns: 1fr;
+		display: block;
 	}
 
 	body > div.features > div.cards > div.cards-row2
 	{
-		grid-column-start: 1;
-		grid-column-end: 4;
-	
-		display: grid;
-		grid-template-columns: 1fr;
+		display: block;
 	}
 }
