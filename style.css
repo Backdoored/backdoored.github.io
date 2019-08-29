@@ -1,0 +1,14 @@
+body > div
+{
+	display: grid;
+}
+
+body > div > h1
+{
+	margin: auto;
+}
+
+body > div > span
+{
+	margin: auto;
+}
