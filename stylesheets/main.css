@@ -1,0 +1,355 @@
+/* ---------  fonts -------- */
+@font-face { font-family: Comic Sans MS; src: url('./fonts/comic.ttf') }
+@font-face { font-family: Comic Sans MS Bold; src: url('./fonts/comicbd.ttf') }
+@font-face { font-family: Comic Sans MS Italic; src: url('./fonts/comici.ttf') }
+@font-face { font-family: Comic Sans MS Bold Italic; src: url('./fonts/comicz.ttf') }
+@font-face { font-family: Source Sans PRO; src: url('./fonts/SourceSansPro-BoldIt.ttf') }
+@font-face { font-family: Source Sans PRO Regular; src: url('./fonts/SourceSansPro-Regular.ttf') }
+@font-face { font-family: Source Sans PRO Standard; src: url('./fonts/SourceSansPro-BlackIt.ttf') }
+@font-face { font-family: Source Sans PRO Semi-Bold; src: url('./fonts/SourceSansPro-Semiboldit.ttf') }
+@font-face { font-family: Source Sans PRO Semi-Bold Italic; src: url('./fonts/SourceSansPro-SemiboldIt.ttf') }
+/* ---------------------- elements ------------------------- */
+body {
+	background-color: #8dc288;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+span {
+	color: #e5ffe5;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 22px;
+}
+
+p  {
+    color: #FFFFFF;
+    font-family: Source Sans PRO Semi-Bold;
+    font-size: 21px;
+}
+a {
+	transition: 0.5s;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 20px;
+	color: #66ffcc;
+}
+ul {
+  display: inline-block;
+}
+li {
+  font-family: Source Sans PRO Semi-Bold Italic;
+  margin-top: 4px;
+  width: auto;
+  height: 40px;
+  color: #485447;
+  text-align:left;
+  font-size: 26px;
+  padding-left: 10px;
+}
+#li_a {
+  font-size: 26px;
+  color: #dfcee2;
+}
+#li_a:hover {
+	transition: 0.3s;
+	color: #bbe3ea;
+	opacity: 0.4;
+	font-size: 28px;
+}
+}
+#li_a:active {
+	color: #e8fbff;
+}
+a:hover {
+	transition: 0.3s;
+	color: #80ffbf;
+	opacity: 0.4;
+	font-size: 22px;
+}
+a:active {
+	color: #66cc66;
+}
+#a_larger {
+	transition: 0.5s;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 42px;
+	color: #66ffcc;
+}
+#a_larger:hover {
+	transition: 0.3s;
+	color: #80ffbf;
+	opacity: 0.4;
+	font-size: 44px;
+}
+#a_larger:active {
+	color: #66cc66;
+}
+h1 {
+	color: #e5ffe5;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 42px;
+}
+h3 {
+	color: #e5ffe5;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 22px;
+}
+pre {
+	color: #e5ffe5;
+}
+/* ------------------ classes -----------------------*/
+.main-nav {
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 15px;
+}
+/* forms expandable*/
+.collapsible_form {
+  overflow:auto;
+  vertical-align: top;
+  background-color: #777;
+  text-align:left;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible_form:hover {
+  background-color: #555;
+  transition: 0.3s;
+}
+
+.inner_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: rgba(140, 140, 140, 0.5);
+}
+
+
+#image_containter_p {
+  color: #0e6632;
+  font-size: 14px;
+}
+/* Head */
+
+body > div.head
+{
+	display: grid;
+	padding: 50px;
+	padding-top: 0px;
+}
+
+body > div.head > h1
+{
+	margin: auto;
+	font-size: 5vw;
+	font-family: 'Luckiest Guy', cursive;
+	text-align: center;
+}
+
+body > div.head > span
+{
+	margin: auto;
+}
+
+@media (max-width: 600px)
+{
+    body > div.head > h1
+	{ 
+		font-size: 12vw;
+	}
+
+    body > div.head > h1 > span
+	{ 
+		display: none;
+	}
+
+	body > div.head > span
+	{
+		font-size: 5vw;
+	}
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Global shenanigans */
+
+
+/* Thanks to https://stackoverflow.com/a/40454819/11896374 for this code */
+[title] {
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 32px;
+	position: relative;
+
+}
+body.touched [title] > * {
+	user-select: none;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 32px;
+	position: relative;
+}
+body.touched [title]:hover > * {
+	user-select: auto;
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 32px;
+	position: relative;
+}
+body.touched [title]:hover:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	content: attr(title);
+	border: 1px solid rgba(100, 100, 100, 0.2);
+	background-color: rgba(240, 240, 240, 0.9);
+	/* 
+	Maybe we should keep the shadow? It makes it seem quite old and not very nice, but without we dont get the on top impression and more of a just overlay impression
+	box-shadow: 1px 1px 2px; */
+	padding: 0.3em;
+	z-index: 1;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* ------------------  tags ---------------------- */
+#title-header {   /*title*/
+	padding-top: 16px;
+	margin-left: 25px;
+}
+/* -- DIVIDER STYLES --*/
+#div-body {
+	background-color: #a6a6a6;
+	margin-left: 145px;
+	margin-right: 145px;
+	padding-left: 20px;
+}
+#div1 {
+	color: #e0ebe0;
+    font-family: Source Sans PRO Semi-Bold;
+    font-size: 16px;
+}
+/* NAVIGATION */
+#main-nav {
+	background-color: rgba(140, 140, 140, 0.5);
+	height: 100px;
+	margin-left: 104px;
+	margin-right: 140px;
+}
+#active-nav {
+	background-color: rgba(60, 60, 60, 0.8);
+	color: #c9ffc9;
+}
+#active-att {
+	color: #c9ffc9;
+}
+/* NAVIGATION END*/
+
+/*------------ Cards ------------- */
+body > div.features
+{
+	padding: 20px;
+	display: grid;
+}
+
+body > div.features > h2
+{
+	margin: auto;
+}
+
+body > div.features > span
+{
+	margin: auto;
+}
+
+body > div.features > div.cards
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+body > div.features > div.cards > div.cards-row2
+{
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.card
+{
+	background-color: #d6d6d6;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+}
+
+div.card > h4
+{
+	margin: 0;
+	text-align: center;
+}
+
+div.card > ul
+{
+	margin: 0;
+}
+
+@media (max-width: 600px)
+{
+	body > div.features > div.cards
+	{
+		display: block;
+	}
+
+	body > div.features > div.cards > div.cards-row2
+	{
+		display: block;
+	}
+}
+.card-title {
+	font-family: Source Sans PRO Semi-Bold Italic;
+	font-size: 32px;
+	position: relative;
+	color: #749091;
+}
+/*-----------END CARDS----------*/
+#main-form-table-styles {
+	width: 100%;
+	margin-top: 10px;
+	background-color: rgba(194, 232, 199, 0.1);
+	height: 50px;
+	font-family: Source Sans PRO Semi-Bold;
+	font-size: 21px;
+	text-align: center;
+	color: #d4e2c0;
+}
+#main-form-button-styles {
+  font-family: Source Sans PRO Semi-Bold Italic;
+  vertical-align: top;
+  width: 25%;
+  height: 40px;
+  color: #fff47c;
+  background-color: #777;
+  text-align:left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 26px;
+  text-align: center;
+}
+#main-form-button-styles:hover {
+  background-color: #555;
+  color: #ffea0a;
+  transition: 0.3s;
+}
