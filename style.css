@@ -1,6 +1,8 @@
 body > div.head
 {
 	display: grid;
+	padding: 50px;
+	padding-top: 0px;
 }
 
 body > div.head > h1
@@ -32,4 +34,56 @@ body > div.head > span
 	{
 		font-size: 5vw;
 	}
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+body > div.features
+{
+	padding: 20px;
+	display: grid;
+}
+
+body > div.features > h2
+{
+	margin: auto;
+}
+
+body > div.features > span
+{
+	margin: auto;
+}
+
+body > div.features > div.cards
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+body > div.features > div.cards > div.cards-row2
+{
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.card
+{
+	background-color: #d6d6d6;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+}
+
+div.card > h4
+{
+	margin: 0;
+	text-align: center;
+}
+
+div.card > ul
+{
+	margin: 0;
 }
