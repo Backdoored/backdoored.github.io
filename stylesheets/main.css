@@ -27,14 +27,10 @@ html
 {
 	font-family: Source Sans PRO Semi-Bold Italic;
 	font-size: 22px;
-	height: 100vh;
-	width: 100vw;
 }
 
 body
 {
-	height: 100vh;
-	width: 100vw;
 }
 
 div#title
